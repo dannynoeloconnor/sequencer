@@ -8,10 +8,8 @@
 // import libraries
 import g4p_controls.*;
 import processing.sound.*;
-import ddf.minim.*;
 
 // define global variables
-/*
 SoundFile f1;
 SoundFile f2;
 SoundFile f3;
@@ -20,17 +18,6 @@ SoundFile f5;
 SoundFile f6;
 SoundFile f7;
 SoundFile f8;
-*/
-Minim minim;
-AudioPlayer f1;
-AudioPlayer f2;
-AudioPlayer f3;
-AudioPlayer f4;
-AudioPlayer f5;
-AudioPlayer f6;
-AudioPlayer f7;
-AudioPlayer f8;
-
 int MyDispX = 800; // set the size of our display window
 int MyDispY = 360;
 int startX = 20;
@@ -68,9 +55,7 @@ void setup() {
   background(bg);
   frameRate(30);  
   // Load a soundfile from the /data folder of the sketch and play it back
-  /*
   f1 = new SoundFile(this, "2.mp3");
-  
   f2 = new SoundFile(this, "3.mp3");
   f3 = new SoundFile(this, "4.mp3");
   f4 = new SoundFile(this, "5.mp3");
@@ -78,18 +63,6 @@ void setup() {
   f6 = new SoundFile(this, "7.mp3");
   f7 = new SoundFile(this, "8.mp3");
   f8 = new SoundFile(this, "9.mp3");
-  */
-  minim = new Minim(this);
-  f1 = minim.loadFile("2.mp3");
-  f2 = minim.loadFile("3.mp3");
-  f3 = minim.loadFile("4.mp3");
-  f4 = minim.loadFile("5.mp3");
-  f5 = minim.loadFile("6.mp3");
-  f6 = minim.loadFile("7.mp3");
-  f7 = minim.loadFile("8.mp3");
-  f8 = minim.loadFile("9.mp3");
-  
-  
   GT1 = new GTimer(this, this, "showtime", tempo);
   // GT1.start(); // commented out, as we're starting and stopping with space bar now.
   rectColor = #555555;
